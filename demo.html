@@ -1,0 +1,21 @@
+<html>
+
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/loader.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            loadScriptAsync('http://localhost:8124'); // this will throw the onload event even if the script is not loaded yet
+//            $.getScript('http://localhost:8124'); // this will throw the onload event after the script is loaded
+        });
+        
+        window.onload = function() {
+            alert('onload event thrown');
+        }
+        </script>
+    </head>
+
+    <body >
+        <img src="http://static.pe.meinvz.net/20100811-0/Img/logo.png" />
+    </body>
+</html>
